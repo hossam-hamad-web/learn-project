@@ -7,6 +7,7 @@ import Gallery from "./components/gallery/Gallery";
 import Mobile from "./components/mobile/mobile";
 import Web from "./components/web/web";
 import Ux from "./components/Ux/Ux";
+import { CounterContextProvider } from "./Context/CounterContext";
 
 let route = createBrowserRouter([
   {
@@ -30,7 +31,9 @@ let route = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={route} />
+      <CounterContextProvider>
+        <RouterProvider router={route} />
+      </CounterContextProvider>
     </>
   );
 }

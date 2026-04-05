@@ -1,19 +1,36 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import About from "./components/About";
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./components/Layout/Layout";
+import Gallery from "./components/gallery/Gallery";
+import Mobile from "./components/mobile/mobile";
+import Web from "./components/web/web";
+import Ux from "./components/Ux/Ux";
+
+let route = createBrowserRouter([
+  {
+    path: "",
+    element: <Layout />,
+    children: [
+      {
+        path: "gallery",
+        element: <Gallery />,
+        children: [
+          { path: "web", element: <Web /> },
+          { path: "mobile", element: <Mobile /> },
+          { path: "ux", element: <Ux /> },
+        ],
+      },
+      { path: "mobile", element: <Mobile /> },
+    ],
+  },
+]);
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <Navbar />
-      <About />
-      <Footer />
+      <RouterProvider router={route} />
     </>
   );
 }

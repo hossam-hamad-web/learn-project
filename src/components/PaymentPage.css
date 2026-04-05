@@ -1,0 +1,143 @@
+.payment-container {
+  display: flex;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* LEFT SIDE */
+.left-section {
+  flex: 1;
+  position: relative;
+  background: linear-gradient(135deg, #2f55ff, #4b77ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  width: 140%;
+  height: 140%;
+  background: white;
+  border-radius: 50%;
+  bottom: -60%;
+  right: -40%;
+}
+
+.brand {
+  position: relative;
+  text-align: center;
+}
+
+.brand h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.brand p {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* RIGHT SIDE */
+.right-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f6f7fb;
+}
+
+.payment-card {
+  background: white;
+  padding: 40px;
+  width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.payment-card h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Payment Methods */
+.payment-methods {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.payment-methods button {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.payment-methods .active {
+  border: 2px solid #2f55ff;
+  background: #eef2ff;
+}
+
+/* Inputs */
+.payment-card input,
+.payment-card select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+/* Checkbox */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.cash-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: white;
+  cursor: pointer;
+}
+
+.pay-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #2f55ff;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.pay-btn:hover {
+  background: #1f3cff;
+}

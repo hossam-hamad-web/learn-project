@@ -8,7 +8,8 @@ import Mobile from "./components/mobile/mobile";
 import Web from "./components/web/web";
 import Ux from "./components/Ux/Ux";
 import { CounterContextProvider } from "./Context/CounterContext";
-
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+let query = new QueryClient();
 let route = createBrowserRouter([
   {
     path: "",
@@ -31,9 +32,11 @@ let route = createBrowserRouter([
 function App() {
   return (
     <>
-      <CounterContextProvider>
-        <RouterProvider router={route} />
-      </CounterContextProvider>
+      <QueryClientProvider client={query}>
+        <CounterContextProvider>
+          <RouterProvider router={route} />
+        </CounterContextProvider>
+      </QueryClientProvider>
     </>
   );
 }
